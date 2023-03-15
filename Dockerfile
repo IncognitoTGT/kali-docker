@@ -7,9 +7,7 @@ ENV DISPLAY :1
 # Add users
 # Installing tools
 RUN apt -y update && apt -y upgrade
-RUN apt install -y git kali-desktop-xfce tightvncserver bash
-RUN curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh | bash
-RUN apt -y install nodejs npm
+RUN apt install -y git kali-desktop-xfce x11vnc bash
 # Setup remote desktop
 COPY xstartup /root/.vnc/xstartup
 RUN chmod +x /root/.vnc/xstartup

@@ -3,8 +3,7 @@ FROM kalilinux/kali-rolling:latest
 WORKDIR /
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=America/New_York
-ENV DISPLAY :1
-# Add users
+ENV DISPLAY :0
 # Installing tools
 RUN apt -y update && apt -y upgrade
 RUN apt install -y git kali-desktop-xfce x11vnc bash

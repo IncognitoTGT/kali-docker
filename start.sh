@@ -1,4 +1,1 @@
-export USER="root"
-x11vnc -display :0 -autoport -localhost -nopw -bg -xkb -ncache -ncache_cr -quiet -forever --create
-startxfce4 :0
-/usr/share/novnc/utils/novnc_proxy --vnc localhost:5900
+/usr/share/novnc/utils/novnc_proxy --listen 8081 --vnc localhost:5900 && x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /usr/sbin/lightdm/:0 -bg -ncache -ncache_cr -quiet -forever -create

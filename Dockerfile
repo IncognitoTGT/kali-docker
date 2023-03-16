@@ -6,7 +6,7 @@ ENV TZ=America/New_York
 ENV DISPLAY :0
 # Installing tools
 RUN apt -y update && apt -y upgrade
-RUN apt install -y git kali-desktop-xfce x11vnc bash
+RUN apt install -y git kali-desktop-xfce x11vnc bash xvfb x11-xserver-utils
 # Setup remote desktop
 COPY xstartup /root/.vnc/xstartup
 RUN chmod +x /root/.vnc/xstartup

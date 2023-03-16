@@ -1,4 +1,3 @@
 #!/bin/bash
 xrdb $HOME/.Xresources
-noVNC/utils/novnc_proxy --vnc localhost:5901
-startxfce4
+startxfce4 &

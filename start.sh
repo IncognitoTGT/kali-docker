@@ -1,1 +1,3 @@
-/usr/share/novnc/utils/novnc_proxy --listen 8081 --vnc localhost:5900 && x11 vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /usr/sbin/lightdm/:0 -bg -ncache -ncache_cr -quiet -forever -create
+# /usr/share/novnc/utils/novnc_proxy --listen 8081 --vnc localhost:5900 && x11 vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /usr/sbin/lightdm/:0 -bg -ncache -ncache_cr -quiet -forever -create
+Xvfb :1 -screen 0 1024x768x16 &> /dev/null & startxfce4 & x11vnc -display :1 -rfbport 5900 -forever -shared -bg -o ~/.vnc/x11vnc.log && tail -f /dev/null && \
+/usr/share/novnc/utils/novnc_proxy --listen 8081 --vnc localhost:5900

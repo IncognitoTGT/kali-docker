@@ -1,1 +1,1 @@
-docker run --name kali-xfce -p 6080:6080/tcp -d kali-xfce
+docker run --name kali-xfce -p 8081:8081/tcp -d kali-xfce
